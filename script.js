@@ -1,7 +1,7 @@
 var map;
 
 const apiKey = 'FoLAtKiesCRtw_6qZxcs';
-const searchURL = 'http://wheelmap.org/api/nodes'
+const searchURL = 'https://wheelmap.org/api/nodes'
 
 //initializing map
 function initMap() {
@@ -32,7 +32,7 @@ function getWheelMapNodes(bounds) {
 	const url = `${searchURL}?${queryString}`
 	fetch(url, options)
 		.then(response => {
-			console.log(response.status);
+			console.log(response);
 		})
 		.catch(err => {
 			console.log(err)
